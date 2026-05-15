@@ -3,7 +3,7 @@ resource "aws_instance" "app_server" {
     instance_type = var.instance_type
     associate_public_ip_address = true 
     key_name = "key_anu"
-    security_group_ids = ["sg-026d9aee394f5d5b1"]
+    vpc_security_group_ids = ["sg-026d9aee394f5d5b1"]
     tags = {
         Name = var.name 
         owner = "anuradha"
